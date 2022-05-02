@@ -122,9 +122,9 @@ export default {
           to: '/'
         },
         {
-          icon: 'fa-brands fa-twitter',
-          title: 'Twitter API Test',
-          to: '/tweepy'
+          icon: 'fa-solid fa-microchip',
+          title: 'Training',
+          to: '/train-classifier'
         }
       ],
       miniVariant: false,

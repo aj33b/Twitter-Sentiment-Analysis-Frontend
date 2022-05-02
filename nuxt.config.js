@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+
 require('dotenv').config()
 
 export default {
@@ -24,7 +25,9 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/persistedState.client.js' }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,8 +41,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/dotenv',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-sweetalert2',
+    'nuxt-highcharts',
   ],
+  highcharts: {},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
